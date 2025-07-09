@@ -32,7 +32,7 @@ const Process = () => {
               {steps.map((step, index) => (
                 <div key={index} className="flex space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center font-semibold">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full flex items-center justify-center font-semibold">
                       {step.number}
                     </div>
                   </div>
@@ -45,10 +45,10 @@ const Process = () => {
             </div>
           </div>
           <div className="relative">
-            <div className="w-full h-96 bg-gray-200 rounded-lg overflow-hidden">
+            <div className="w-full h-96 bg-gray-200 rounded-lg overflow-hidden shadow-2xl">
               <img 
-                src="/lovable-uploads/3b4342f6-6b42-4970-a42b-bc89ee42d110.png" 
-                alt="Modern Interior" 
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Modern Interior Process" 
                 className="w-full h-full object-cover"
               />
             </div>

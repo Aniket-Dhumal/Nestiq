@@ -34,21 +34,21 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <Button className="bg-gray-900 hover:bg-gray-800">
+            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300">
               Learn More
             </Button>
           </div>
           <div className="relative">
-            <div className="w-full h-96 bg-gray-200 rounded-lg overflow-hidden">
+            <div className="w-full h-96 bg-gray-200 rounded-lg overflow-hidden shadow-2xl">
               <img 
-                src="/lovable-uploads/3b4342f6-6b42-4970-a42b-bc89ee42d110.png" 
-                alt="Interior Design" 
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Interior Design Studio" 
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-white rounded-lg shadow-lg flex items-center justify-center">
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">10+</div>
+                <div className="text-2xl font-bold text-gray-900">15+</div>
                 <div className="text-xs text-gray-600">Years</div>
               </div>
             </div>

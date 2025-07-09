@@ -61,19 +61,31 @@ const Hero = () => {
               <div className="space-y-6">
                 <div className="h-48 bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl overflow-hidden shadow-2xl transform rotate-3 hover:rotate-6 transition-transform duration-300">
                   <img 
-                    src="/lovable-uploads/3b4342f6-6b42-4970-a42b-bc89ee42d110.png" 
+                    src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                     alt="Modern Interior Design" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl shadow-xl transform -rotate-2 hover:-rotate-3 transition-transform duration-300"></div>
+                <div className="h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl shadow-xl transform -rotate-2 hover:-rotate-3 transition-transform duration-300 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    alt="Luxury Bedroom" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
               <div className="space-y-6 pt-8">
-                <div className="h-32 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl shadow-xl transform rotate-2 hover:rotate-3 transition-transform duration-300"></div>
+                <div className="h-32 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl shadow-xl transform rotate-2 hover:rotate-3 transition-transform duration-300 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    alt="Modern Kitchen" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div className="h-48 bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl overflow-hidden shadow-2xl transform -rotate-3 hover:-rotate-6 transition-transform duration-300">
                   <img 
-                    src="/lovable-uploads/3b4342f6-6b42-4970-a42b-bc89ee42d110.png" 
-                    alt="Luxury Living Room" 
+                    src="https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    alt="Luxury Bathroom" 
                     className="w-full h-full object-cover"
                   />
                 </div>
