@@ -10,7 +10,7 @@ const Header = () => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Gallery', href: '#gallery' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -34,7 +34,7 @@ const Header = () => {
                 className="relative text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium group"
               >
                 {item.name}
-                <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transform scale-x-0group-hover:scale-x-100 transition-transform duration-300"></span>
+                <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
               </a>
             ))}
           </nav>
