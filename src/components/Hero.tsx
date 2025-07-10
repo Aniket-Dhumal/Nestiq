@@ -16,7 +16,7 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full text-blue-700 text-sm font-medium">
               <Sparkles className="w-4 h-4 mr-2" />
-              Premium Interior Design Studio
+              AI Interior Design Studio
             </div>
             
             <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">

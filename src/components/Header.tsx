@@ -26,7 +26,7 @@ const Header = () => {
             <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               NESTIQ
             </div>
-            <div className="ml-2 text-sm text-gray-500 font-medium">Interior Design</div>
+            
           </Link>
 
           {/* Desktop Navigation */}
