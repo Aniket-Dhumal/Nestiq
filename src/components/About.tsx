@@ -115,28 +115,32 @@ const About = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
-            <Card key={index} className="group overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl border-0 bg-gradient-to-br from-white to-gray-50 aspect-square">
-              <CardContent className="p-6 h-full flex flex-col justify-between">
-                <div className="text-center flex-grow flex flex-col justify-center">
-                  <div className="relative mb-6">
-                    <div className="w-20 h-20 mx-auto mb-4 relative overflow-hidden rounded-full ring-4 ring-gradient-to-r from-blue-500 to-purple-500 ring-offset-2 group-hover:ring-offset-4 transition-all duration-300">
-                      <Avatar className="w-full h-full">
-                        <AvatarImage 
-                          src={member.image} 
-                          alt={member.name}
-                          className="object-cover group-hover:scale-110 transition-transform duration-300"
-                        />
-                        <AvatarFallback className="bg-gradient-to-br from-blue-500 to-purple-500 text-white font-semibold text-sm">
-                          {member.name.split(' ').map(n => n[0]).join('')}
-                        </AvatarFallback>
-                      </Avatar>
-                    </div>
+            <Card key={index} className="group overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl border-0 bg-gradient-to-br from-white to-gray-50">
+              <CardContent className="p-6 h-full flex flex-col items-center text-center">
+                <div className="relative mb-6">
+                  <div className="w-24 h-24 mx-auto mb-4 relative overflow-hidden rounded-2xl ring-4 ring-white shadow-lg group-hover:shadow-xl transition-all duration-300">
+                    <Avatar className="w-full h-full rounded-2xl">
+                      <AvatarImage 
+                        src={member.image} 
+                        alt={member.name}
+                        className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-300 rounded-2xl"
+                      />
+                      <AvatarFallback className="bg-gradient-to-br from-blue-500 to-purple-500 text-white font-semibold text-lg rounded-2xl">
+                        {member.name.split(' ').map(n => n[0]).join('')}
+                      </AvatarFallback>
+                    </Avatar>
                   </div>
+                </div>
+                
+                <div className="flex-grow">
                   <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300">
                     {member.name}
                   </h4>
                   <p className="text-gray-600 text-sm font-medium group-hover:text-blue-600 transition-colors duration-300 mb-4">
                     {member.designation}
+                  </p>
+                  <p className="text-gray-500 text-xs leading-relaxed mb-6">
+                    {member.description}
                   </p>
                 </div>
                 
@@ -147,7 +151,7 @@ const About = () => {
                       href={member.social.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-8 h-8 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-colors duration-200"
+                      className="w-8 h-8 bg-blue-600 hover:bg-blue-700 text-white rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
                     >
                       <Linkedin className="h-4 w-4" />
                     </a>
@@ -157,7 +161,7 @@ const About = () => {
                       href={member.social.twitter}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-8 h-8 bg-sky-500 hover:bg-sky-600 text-white rounded-full flex items-center justify-center transition-colors duration-200"
+                      className="w-8 h-8 bg-sky-500 hover:bg-sky-600 text-white rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
                     >
                       <Twitter className="h-4 w-4" />
                     </a>
@@ -167,7 +171,7 @@ const About = () => {
                       href={member.social.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-8 h-8 bg-pink-600 hover:bg-pink-700 text-white rounded-full flex items-center justify-center transition-colors duration-200"
+                      className="w-8 h-8 bg-pink-600 hover:bg-pink-700 text-white rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
                     >
                       <Instagram className="h-4 w-4" />
                     </a>
@@ -177,7 +181,7 @@ const About = () => {
                       href={member.social.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-8 h-8 bg-gray-800 hover:bg-gray-900 text-white rounded-full flex items-center justify-center transition-colors duration-200"
+                      className="w-8 h-8 bg-gray-800 hover:bg-gray-900 text-white rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
                     >
                       <Github className="h-4 w-4" />
                     </a>

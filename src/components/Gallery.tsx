@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Gallery = () => {
   const projects = [
@@ -62,7 +63,11 @@ const Gallery = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div key={project.id} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <Link 
+              key={project.id} 
+              to={`/gallery/${project.id}`}
+              className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer"
+            >
               <div className="relative overflow-hidden">
                 <img 
                   src={project.image} 
@@ -90,14 +95,16 @@ const Gallery = () => {
                   {project.description}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
-            View All Projects
-          </button>
+          <Link to="/gallery">
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+              View All Projects
+            </button>
+          </Link>
         </div>
       </div>
     </section>

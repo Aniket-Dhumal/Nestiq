@@ -1,9 +1,11 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Gallery from '../components/Gallery';
 import { Button } from '@/components/ui/button';
+import { ExternalLink } from 'lucide-react';
 
 const GalleryPage = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -25,7 +27,7 @@ const GalleryPage = () => {
       details: 'This luxury penthouse project features an open-plan living space with floor-to-ceiling windows, custom furniture, and premium finishes throughout.'
     },
     {
-      id: 2,
+      id: 3,
       title: 'Executive Office Suite',
       category: 'commercial',
       image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
@@ -33,7 +35,7 @@ const GalleryPage = () => {
       details: 'A modern office design that balances professionalism with comfort, featuring ergonomic workstations and collaborative spaces.'
     },
     {
-      id: 3,
+      id: 2,
       title: 'Luxury Villa Living Room',
       category: 'residential',
       image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
@@ -106,7 +108,11 @@ const GalleryPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {filteredProjects.map((project) => (
-              <div key={project.id} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <Link 
+                key={project.id} 
+                to={`/gallery/${project.id}`}
+                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer"
+              >
                 <div className="relative overflow-hidden h-64">
                   <img 
                     src={project.image} 
@@ -114,6 +120,11 @@ const GalleryPage = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-full p-2">
+                      <ExternalLink className="h-5 w-5 text-gray-700" />
+                    </div>
+                  </div>
                 </div>
                 
                 <div className="p-8">
@@ -132,7 +143,7 @@ const GalleryPage = () => {
                     {project.details}
                   </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
