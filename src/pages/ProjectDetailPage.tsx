@@ -85,7 +85,9 @@ const ProjectDetailPage = () => {
     }
   };
 
-  const project = projectsData[id as keyof typeof projectsData];
+  // Convert string id to number and validate
+  const projectId = parseInt(id || '0', 10);
+  const project = projectsData[projectId as keyof typeof projectsData];
 
   if (!project) {
     return (
