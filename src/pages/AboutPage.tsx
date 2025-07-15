@@ -4,33 +4,33 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import About from '../components/About';
 import Stats from '../components/Stats';
-import { Award, Users, Calendar, Target } from 'lucide-react';
+import { Brain, Zap, Target } from 'lucide-react';
 
 const AboutPage = () => {
   const values = [
     {
       icon: Target,
       title: 'Our Mission',
-      description: 'To create extraordinary living spaces that inspire and enhance the lives of our clients through innovative design and exceptional craftsmanship.'
+      description: 'To make professional interior design accessible to everyone through the power of AI, connecting imagination with real, actionable solutions.'
     },
     {
-      icon: Award,
-      title: 'Excellence',
-      description: 'We maintain the highest standards in every project, ensuring quality that stands the test of time.'
+      icon: Brain,
+      title: 'AI Innovation',
+      description: 'We leverage cutting-edge artificial intelligence to understand your space, style, and needs, delivering personalized design solutions.'
     },
     {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'We work closely with our clients, understanding their unique needs and bringing their vision to life.'
+      icon: Zap,
+      title: 'Instant Results',
+      description: 'From photo upload to shoppable design plan in minutes—revolutionizing how people approach interior design.'
     },
   ];
 
   const milestones = [
-    { year: '2008', event: 'NESTIQ Founded', description: 'Started with a vision to transform interior design' },
-    { year: '2012', event: 'First Major Award', description: 'Won the Interior Design Excellence Award' },
-    { year: '2016', event: '500+ Projects', description: 'Completed 500 successful projects across the region' },
-    { year: '2020', event: 'Team Expansion', description: 'Grew to 25+ design professionals' },
-    { year: '2024', event: 'Sustainability Focus', description: 'Launched eco-friendly design initiatives' },
+    { year: '2023', event: 'NESTIQ Founded', description: 'Launched with a vision to democratize interior design through AI' },
+    { year: '2023', event: 'AI Engine Launch', description: 'Released our first AI-powered design recommendation system' },
+    { year: '2024', event: 'Brand Partnerships', description: 'Partnered with major furniture and home decor retailers' },
+    { year: '2024', event: 'Mobile App', description: 'Launched mobile app for on-the-go design solutions' },
+    { year: '2024', event: 'Global Expansion', description: 'Expanded AI design services to multiple countries' },
   ];
 
   return (
@@ -49,24 +49,25 @@ const AboutPage = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                For over 15 years, NESTIQ has been at the forefront of interior design innovation, 
-                creating spaces that perfectly blend functionality with aesthetic beauty.
+                NESTIQ is revolutionizing interior design with AI technology that makes professional design 
+                accessible to everyone. We bridge the gap between inspiration and execution through intelligent 
+                recommendations and seamless shopping integration.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-4 bg-white rounded-lg shadow-lg">
-                  <div className="text-3xl font-bold text-blue-600">500+</div>
-                  <div className="text-gray-600">Projects</div>
+                  <div className="text-3xl font-bold text-blue-600">AI</div>
+                  <div className="text-gray-600">Powered</div>
                 </div>
                 <div className="text-center p-4 bg-white rounded-lg shadow-lg">
-                  <div className="text-3xl font-bold text-purple-600">15+</div>
-                  <div className="text-gray-600">Years</div>
+                  <div className="text-3xl font-bold text-purple-600">1M+</div>
+                  <div className="text-gray-600">Designs</div>
                 </div>
               </div>
             </div>
             <div className="relative">
               <img 
                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="NESTIQ Design Studio" 
+                alt="NESTIQ AI Design Technology" 
                 className="w-full h-96 object-cover rounded-2xl shadow-2xl"
               />
             </div>
@@ -83,7 +84,7 @@ const AboutPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              The principles that guide everything we do at NESTIQ
+              The principles that drive our AI-powered approach to interior design
             </p>
           </div>
           
@@ -107,7 +108,7 @@ const AboutPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Key milestones in our journey to becoming a leading interior design studio
+              Key milestones in building the future of AI-powered interior design
             </p>
           </div>
           
@@ -131,7 +132,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* About Section */}
       <About />
 
       <Footer />

@@ -7,50 +7,38 @@ const Services = () => {
     {
       icon: Palette,
       title: 'Interior Design',
-      description: 'Complete interior transformation with modern aesthetics and functional layouts.',
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50',
-      gradient: 'from-blue-500 to-cyan-500'
+      description: 'Create fully furnished, beautifully balanced spaces with our AI-powered design assistant. Every detail is tailored to your style.',
+      features: ['Scaled furniture arrangements', 'Decor suggestions', 'Paint palettes and finishes', 'Real, purchasable products from trusted brands']
     },
     {
       icon: Lightbulb,
       title: 'Lighting Design',
-      description: 'Illuminate your space with custom lighting solutions that create the perfect ambiance.',
-      color: 'text-yellow-600',
-      bgColor: 'bg-yellow-50',
-      gradient: 'from-yellow-500 to-orange-500'
+      description: 'Discover lighting layouts that enhance mood, function, and style—suggested based on your space and purpose.',
+      features: ['Fixture placements', 'Lighting types (warm, ambient, task, etc.)', 'Product links from partner brands', 'Customize based on existing decor']
     },
     {
       icon: Home,
       title: 'Residential Design',
-      description: 'Transform your home into a personal sanctuary that reflects your lifestyle.',
-      color: 'text-green-600',
-      bgColor: 'bg-green-50',
-      gradient: 'from-green-500 to-emerald-500'
+      description: 'Design stunning homes with ready-to-shop design plans. Just upload a photo, choose a goal, and we deliver the rest.',
+      features: ['3D layouts', 'Product suggestions', 'Multiple design styles (Scandinavian, Modern, Boho, etc.)', 'Voice/text customization options']
     },
     {
       icon: Building,
       title: 'Commercial Spaces',
-      description: 'Professional office and commercial spaces that inspire productivity and success.',
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50',
-      gradient: 'from-purple-500 to-pink-500'
+      description: 'Transform offices, studios, or client spaces with layouts that balance aesthetics with productivity.',
+      features: ['Efficient layouts based on team size', 'Brand-aligned decor', 'Acoustic, lighting, ergonomic suggestions', 'Shoppable B2B and retail recommendations']
     },
     {
       icon: Sofa,
       title: 'Furniture Selection',
-      description: 'Curated furniture pieces that perfectly complement your interior design vision.',
-      color: 'text-indigo-600',
-      bgColor: 'bg-indigo-50',
-      gradient: 'from-indigo-500 to-blue-500'
+      description: 'AI-recommended furniture that fits your space, taste, and budget—sourced from top brands and ready to shop.',
+      features: ['AI-curated sets', 'Product details (price, brand, availability)', 'Side-by-side alternatives', 'Theme compatibility with your paint and lighting choices']
     },
     {
       icon: PaintBucket,
-      title: 'Color Consultation',
-      description: 'Expert color schemes and palettes that bring harmony and style to your space.',
-      color: 'text-rose-600',
-      bgColor: 'bg-rose-50',
-      gradient: 'from-rose-500 to-pink-500'
+      title: 'Colour Consultation',
+      description: 'We suggest precise paint shades and combinations powered by leading paint brands.',
+      features: ['Accurate color codes from top brands (e.g., Asian Paints, Nerolac)', 'Coordinated palettes', 'Mood-based suggestions (calm, bold, cozy)', 'Sample and finish compatibility with selected furniture']
     },
   ];
 
@@ -60,22 +48,31 @@ const Services = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Premium Services</h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            From concept to completion, we offer comprehensive design solutions tailored to your vision
+            AI-powered design solutions that connect your vision to real, shoppable products
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div key={index} className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-              <div className={`w-16 h-16 ${service.bgColor} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <service.icon className={`h-8 w-8 ${service.color}`} />
+              <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <service.icon className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
                 {service.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">{service.description}</p>
+              <p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>
               
-              <div className="mt-6 flex items-center text-blue-600 font-medium group-hover:text-purple-600 transition-colors duration-300">
+              <div className="space-y-2 mb-6">
+                {service.features.map((feature, featureIndex) => (
+                  <div key={featureIndex} className="flex items-start space-x-2">
+                    <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2"></div>
+                    <span className="text-sm text-gray-600">{feature}</span>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="flex items-center text-blue-600 font-medium group-hover:text-purple-600 transition-colors duration-300">
                 <span className="text-sm">Learn More</span>
                 <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

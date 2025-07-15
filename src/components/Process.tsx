@@ -1,58 +1,72 @@
 
 import React from 'react';
+import { Camera, Target, Sparkles, Edit, ShoppingBag } from 'lucide-react';
 
 const Process = () => {
   const steps = [
     {
       number: '01',
-      title: 'Consultation',
-      description: 'We start with a detailed consultation to understand your vision, needs, and budget.',
+      icon: Camera,
+      title: 'Snap Your Space',
+      description: 'Take a photo of the empty room you want to design.',
     },
     {
       number: '02',
-      title: 'Design',
-      description: 'Our team creates comprehensive design plans and 3D visualizations for your approval.',
+      icon: Target,
+      title: 'Set Your Purpose',
+      description: 'Choose the room type and style preferences.',
     },
     {
       number: '03',
-      title: 'Execution',
-      description: 'We bring your design to life with careful project management and quality craftsmanship.',
+      icon: Sparkles,
+      title: 'Let AI Work Its Magic',
+      description: 'Get a fully styled layout with paint, furniture, lighting, and decor suggestions.',
+    },
+    {
+      number: '04',
+      icon: Edit,
+      title: 'Customize Your Way',
+      description: 'Tell the AI to swap or adjust any item.',
+    },
+    {
+      number: '05',
+      icon: ShoppingBag,
+      title: 'Shop What You Love',
+      description: 'Click on any item to shop real products and bring your space to life.',
     },
   ];
 
   return (
-    <section className="bg-gray-50 py-20">
+    <section className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Designing Your Dream in Three Simple Steps
-            </h2>
-            <div className="space-y-8">
-              {steps.map((step, index) => (
-                <div key={index} className="flex space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full flex items-center justify-center font-semibold">
-                      {step.number}
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
-                    <p className="text-gray-600">{step.description}</p>
-                  </div>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Designing Your Dream in Simple Steps
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            From photo to finished design in minutes with our AI-powered process
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          {steps.map((step, index) => (
+            <div key={index} className="text-center group">
+              <div className="relative mb-6">
+                <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl flex items-center justify-center font-bold text-lg mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {step.number}
                 </div>
-              ))}
+                <div className="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center mx-auto -mt-6 relative z-10">
+                  <step.icon className="w-6 h-6 text-gray-700" />
+                </div>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">{step.title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
+              
+              {index < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-blue-200 to-purple-200 transform -translate-x-1/2 z-0"></div>
+              )}
             </div>
-          </div>
-          <div className="relative">
-            <div className="w-full h-96 bg-gray-200 rounded-lg overflow-hidden shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Modern Interior Process" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
